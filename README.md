@@ -1,0 +1,1 @@
+# Quadratic-Function-Information-Counter
