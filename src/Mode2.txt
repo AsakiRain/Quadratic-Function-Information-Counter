@@ -1,0 +1,22 @@
+﻿else{
+            if mode==2 {
+                println!("You selected y mode. Please input y, point in y={}x²+{}x+{} will come out",a,b,c);
+
+                io::stdin().read_line(&mut uy)
+                    .expect("Failed to read a correct line!-uy");
+                let uy:i32 = match uy.trim().parse() {
+                    Ok(num) => num,
+                    Err(_) => c,
+                }; //Read input y
+
+                let mut xps:i32 = b*b-4*a*(c-uy); //Move y
+
+                let mut xpsq:i32 = Sqrt(xps);
+                let mut ox1:i32 = (b*upd-xpsq)/(2*a);
+                let mut ox2:i32 = (b*upd+xpsq)/(2*a); //Counting
+
+                println!("Points at [{},{}] and [{},{}]",ox1,uy,ox2,uy);
+        }else{
+                println!("Sorry, unsupport mode!");
+            };
+        };
